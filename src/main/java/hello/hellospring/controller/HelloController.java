@@ -19,13 +19,13 @@ public class HelloController {
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name,Model model) {
         model.addAttribute("name",name);
-        return "hello-template";
+        return "hello-template"; //이 이름을 가지고 template을 찾는다.
     }
 
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name) {
-        return "hello "+name;
+        return "hello "+name; //문자그대로 화면에 뿌려짐
     }
 
     @GetMapping("hello-api")
@@ -33,7 +33,7 @@ public class HelloController {
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
-        return hello;
+        return hello; //객체를 넘겨줌
     }
 
     static class Hello {
