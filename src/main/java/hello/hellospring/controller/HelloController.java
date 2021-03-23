@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-    @GetMapping("hello")
-    public String hello(Model model){
+    
+    @GetMapping("hello") // '/hello'라고 들어오면 이곳으로 이동
+    public String hello(Model model){ //mvc중에 m을 의미
         model.addAttribute("data","hello!!");
         return "hello";
     }
