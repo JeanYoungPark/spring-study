@@ -9,7 +9,11 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberReository memberReository = new MemoryMemberRepository();
+    private final MemberReository memberReository;
+
+    public MemberService(MemberReository memberReository) {
+        this.memberReository = memberReository;
+    }
 
     //회원가입
     public Long join(Member member){
