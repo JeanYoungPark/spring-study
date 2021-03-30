@@ -22,11 +22,11 @@ public class SpringConfig {
 
     @Bean
     public MemberService memberService(){
-        return new MemberService(memberReository());
+        return new MemberService(memberRepository());
     }
 
     @Bean
-    public MemberRepository memberReository(){
+    public MemberRepository memberRepository(){
         return new JdbcMemberRepository(dataSource);
     }
 }
