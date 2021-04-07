@@ -20,6 +20,9 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	implementation 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//mysql 의존성 설정(jpa와 mysql)
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	compile 'mysql:mysql-connector-java'
 }
 
 test {
